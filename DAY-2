@@ -1,0 +1,145 @@
+/* 
+Packages:
+Collection of sub-packages and class files.
+
+Types:
+a) Built-in packages
+b) User defined packages
+
+Built-in packages - lang, util, awt, io, sql, net
+default package -> lang - System, Math, String, Integer, Character, Float etc.
+class 
+
+Scanner Class:
+Present in util package.
+
+nextInt() method of Scanner class:
+- takes integer input
+- non static method 
+- can be accessed only by class object
+nextFloat() - takes floating nos as input
+
+*/
+
+/*
+import java.util.Scanner;
+class Test {
+    public static void main(String[] args) {
+
+        int a; //local variable
+        String name;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value: ");
+        a = sc.nextInt();
+        System.out.println("value: " + a);
+        sc.nextLine();
+        System.out.print("Enter the name: ");
+        name = sc.nextLine();
+        System.out.println("Name: " + name);
+    
+    }
+}
+*/
+/*
+package hero;
+class Test {
+    public static void main(String[] args) {
+        System.out.print("This is package class");
+    }
+}
+*/
+
+/*
+//Command Line Argument
+class Test {
+    public static void main(String[] args) {
+        System.out.println("Command Line arg: " + args[0] + " " + args[1]);
+    }
+}
+*/
+
+/* 
+Access Modifiers: defines how members of a class are accessed.
+
+- public - can be accessed from anywhere
+- private - can be accessed only within the same class
+- protected - only child class can access it
+- default - can be accessed within the same package
+pack1 - A
+pack2 - B
+
+public < protected < defualt < private
+
+
+
+
+*/
+/*
+class Test {
+
+    private int b;
+
+    //setter method
+    public void setB(int x) {
+        b = x;
+    }
+
+    //getter method
+    public int getB() {
+        return b;
+    }
+
+}
+
+class DriveTest {
+    public static void main(String args[]) {
+        Test ob = new Test();
+
+        ob.setB(20);
+
+        System.out.println("Data: " + ob.getB());
+    }
+}
+/* 
+Static Methods:methods defined with static keyword
+
+Non - Static members are accessed with objects
+Static members can be accessed by both object and class name
+
+
+
+*/
+
+/*
+class Test {
+    int x;
+    static int y;
+
+    void show() {
+        System.out.println("Non static Data: " + x);
+        System.out.println("Show Static Data: " + y);
+    }
+    static void display() {
+        System.out.println("Static Data: " + y);
+    }
+}
+
+class TestDrive {
+    public static void main(String[] args) {
+        Test ob = new Test();
+
+        ob.x = 20;
+        Test.y = 30;
+
+        ob.show();
+        Test.display();
+    }
+}
+*/
+
+//Why main method is public static and void?
+Ans:
+When java runtime starts, there is no object of the class present. 
+That's why the main method has to be static so that JVM can load the class into memory and call the main method. 
+If the main method won't be static, JVM would not be able to call it because there is no object of the class is present

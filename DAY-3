@@ -1,0 +1,33 @@
+//Assignment : final vs finally vs finalize
+
+Final
+Final is a keyword and it can be used to mark a variable "unchangeable" . Actually, it is used to apply restrictions on class, method and variable. Final class can't be inherited, final method can't be overridden and final variable value can't be changed. An object can also be final, which means that the once the object is created it cannot be assigned a different object, although the properties or fields of the object can be changed.
+
+Example
+ 
+private final String halo = "Hello World!";
+
+finally
+Finally is a code block. It is used with try-catch block for handling exception. finally code block will be executed whether exception is handled or not
+
+Example
+ 
+try {
+  //code here
+} catch (SomeException se) {
+  //handle exception here
+} finally {
+  //always executed this code block
+}
+
+finalize
+Finalize is a method of Object class. It is invoked before an object is discarded by the garbage collector , allowing it to clean up its state.
+
+Example
+ 
+protected void finalize() {
+  //free resources here
+  super.finalize();
+}
+
+
